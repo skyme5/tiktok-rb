@@ -230,9 +230,10 @@ class TikTok
       next if url.nil?
       next if @downloaded.include? url
       @downloaded << url if !@downloaded.include? url
+      uri = URI(url.gsub(/^\/\//, "http://").gsub("?video_id=", "").gsub(/&/, "?"))
       @list << {
         "url" => url.gsub(/^\/\//, "http://"),
-        "path" => "B:/TikTok/" + url.gsub(reg, base).gsub("?video_id=", "").split("&")[0]
+        "path" => "B:/TikTok/" + base + uri.path
       }
     }
   end
@@ -303,30 +304,6 @@ class TikTok
 
     $LOG.debug "Downloading media files"
     system("aria2c --auto-file-renaming=false --continue=true -i B:/Scripts/tiktok/urls_new.txt")
-    # list = @list.map{
-    #   |a|
-
-    #   path = File.split(a["path"])
-    #   fname = path[1]
-    #   dir = path[0]
-    #   [
-    #     a["url"],
-    #     "    dir=" + dir,
-    #     "    out=" + fname
-    #   ].join("\n")
-    # }
-
-    # downloaded = File.open("B:/TikTok/downloaded.txt", "w")
-    # downloaded.puts @downloaded.join("\n")
-    # downloaded.close
-
-    # $LOG.info "Saving media urls for download => list.txt"
-    # out = File.open("B:/TikTok/list.txt", "w")
-    # out.puts list.join("\n")
-    # out.close
-
-    # $LOG.debug "Downloading media files"
-    # system("aria2c --auto-file-renaming=false --continue=true -i B:/TikTok/list.txt")
   end
 
   def getAll()

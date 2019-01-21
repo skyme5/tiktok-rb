@@ -223,7 +223,6 @@ class TikTok
       next if @downloaded.include? url
       @downloaded << url if !@downloaded.include? url
       uri = URI(url.gsub(/^\/\//, "http://").gsub("?video_id=", "").gsub(/&/, "?"))
-      # query = uri.query.split("=").last
       @list << {
         "url" => url.gsub(/^\/\//, "http://"),
         "path" => "B:/TikTok/" + base + uri.path
@@ -295,7 +294,7 @@ class TikTok
     out.close
 
     $LOG.debug "Downloading media files"
-    # system("aria2c --auto-file-renaming=false --continue=true -i B:/Scripts/tiktok/urls_new.txt")
+    system("aria2c --auto-file-renaming=false --continue=true -i B:/Scripts/tiktok/urls_new.txt")
   end
 
   def getAll()

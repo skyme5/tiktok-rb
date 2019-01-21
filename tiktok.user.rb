@@ -229,9 +229,10 @@ class TikTok
       next if url.nil?
       next if @downloaded.include? url
       @downloaded << url if !@downloaded.include? url
+      uri = URI(url.gsub(/^\/\//, "http://").gsub("?video_id=", "").gsub(/&/, "?"))
       @list << {
         "url" => url.gsub(/^\/\//, "http://"),
-        "path" => "B:/TikTok/" + url.gsub(reg, base).gsub("?video_id=", "").split("&").first
+        "path" => "B:/TikTok/" + base + uri.path
       }
     }
   end
@@ -326,4 +327,4 @@ for user in userlist
 end
 
 $LOG.debug "Downloading media files"
-# system("aria2c --auto-file-renaming=false --continue=true -i B:/Scripts/tiktok/user.urls_new.txt")
+system("aria2c --auto-file-renaming=false --continue=true -i B:/Scripts/tiktok/user.urls_new.txt")
