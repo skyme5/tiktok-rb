@@ -1,0 +1,15 @@
+https://is3-ssl.mzstatic.com/image/thumb/Music60/v4/0b/ab/79/0bab79ef-c8fe-d718-ccd5-ee3f068ad2da/190295940546.jpg/170x170bb.jpg
+    dir=B:/TikTok/6648921985814367489/image/thumb/Music60/v4/0b/ab/79/0bab79ef-c8fe-d718-ccd5-ee3f068ad2da/190295940546.jpg
+    out=170x170bb.jpg
+http://is3-ssl.mzstatic.com/image/thumb/Music60/v4/0b/ab/79/0bab79ef-c8fe-d718-ccd5-ee3f068ad2da/190295940546.jpg/170x170bb.jpg
+    dir=B:/TikTok/6648921985814367489/image/thumb/Music60/v4/0b/ab/79/0bab79ef-c8fe-d718-ccd5-ee3f068ad2da/190295940546.jpg
+    out=170x170bb.jpg
+http://p16-tiktokcdn-com.akamaized.net/large/v0201/27e8dc862c7a4afeb7ac8a75f1439425.jpeg
+    dir=B:/TikTok/6648921985814367489/large/v0201
+    out=27e8dc862c7a4afeb7ac8a75f1439425.jpeg
+http://p16-tiktokcdn-com.akamaized.net/obj/v0201/3b737feec1c84d5b8fb77e2616d3639b
+    dir=B:/TikTok/6648921985814367489/obj/v0201
+    out=3b737feec1c84d5b8fb77e2616d3639b
+https://api2.musical.ly/aweme/v1/play/?video_id=v07025ef0000bh2refisk3dj40l9rrl0&line=0&ratio=720p&media_type=4&vr_type=0&test_cdn=None&improve_bitrate=0
+    dir=B:/TikTok/6648921985814367489/aweme/v1/play
+    out=v07025ef0000bh2refisk3dj40l9rrl0
