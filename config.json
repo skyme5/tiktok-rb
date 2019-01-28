@@ -1,0 +1,41 @@
+[
+{
+    "user_id": "6171987",
+    "Host": "t.tiktok.com",
+    "path": "/aweme/v1/aweme/post/",
+    "Referer": "https://t.tiktok.com/i18n/share/user/6171987",
+    "_signature": "OhvDpxARZlvMcp320Nlv7Tobw7",
+    "count": 21
+},
+{
+    "user_id": "6548314611485032449",
+    "Host": "t.tiktok.com",
+    "path": "/aweme/v1/aweme/post/",
+    "Referer": "https://t.tiktok.com/i18n/share/user/6548314611485032449",
+    "_signature": "4UMoSxAfvRkXKnYa9wfVcOFDKF",
+    "count": 21
+},
+{
+    "user_id": "6521188290954007552",
+    "Host": "t.tiktok.com",
+    "path": "/aweme/v1/aweme/post/",
+    "Referer": "https://t.tiktok.com/i18n/share/user/6521188290954007552",
+    "_signature": "1RcwuhAeiWIjfm7riiRZltUXMK",
+    "count": 21
+},
+{
+    "user_id": "6516360574120673282",
+    "Host": "t.tiktok.com",
+    "path": "/aweme/v1/aweme/post/",
+    "Referer": "https://t.tiktok.com/i18n/share/user/6516360574120673282",
+    "_signature": "7s9N1BAcsowYphOFIkKSn-7PTc",
+    "count": 21
+},
+{
+    "user_id": "6573125246566678529",
+    "Host": "t.tiktok.com",
+    "path": "/aweme/v1/aweme/favorite/",
+    "Referer": "https://t.tiktok.com/i18n/share/user/6573125246566678529",
+    "_signature": "4mgdqhATvjIUAUP7SOJJsOJoHb",
+    "count": 21
+}]

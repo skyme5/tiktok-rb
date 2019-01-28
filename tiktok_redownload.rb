@@ -20,44 +20,35 @@ $LOG = Logger.new(STDOUT)
 
 # https://t.tiktok.com/aweme/v1/aweme/favorite/?user_id=6573125246566678529&count=1&max_cursor=0&aid=1180&_signature=
 # https://t.tiktok.com/aweme/v1/aweme/favorite/?user_id=6573125246566678529&count=21&max_cursor=0&aid=1180&_signature=C.mUYBAHUCuDzGW4BW0ZuAv5lH
-# https://t.tiktok.com/i18n/share/user/6516360574120673282
 $start = Time.now
 
 class TikTok
-  def initialize(user_id, __signature, limit)
+  def initialize(user_id, count)
     @_name = "TikTok"
     @_version = "0.0.1"
     @_user_id = user_id;
-    @limit = limit
-    @__signature = __signature
-    @_max_cursor = 0
+    @_count = count
+    @_max_cursor = 50
     @count = 0
-    @downloaded = File.open("B:/Scripts/tiktok/user.urls_downloaded.txt").read.split("\n")
+    @downloaded = [] #File.open("B:/TikTok/downloaded.txt").read.split("\n")
     @downloaded << Time.now
     @list = []
-    @max_limit = 1300
+    @valid_url_regexp = /^http\:\/\// #/\A#{URI::regexp(['http', 'https'])}\z/
   end
 
   def getJSON
     query = [
-      "/h5/share/usr/list/#{@_user_id}/?",
-      "user_id=#{@_user_id}",
-      "&count=#{@limit}",
-      "&max_cursor=#{@_max_cursor}",
-      "_signature=#{@__signature}"
-    ].join("")
+      "/api/v2/tiktok",
+      "#{@_count}",
+      "#{@_max_cursor}"
+    ].join("/")
 
-    $LOG.info "Fetching aweme_list from TikTok ... #{query}".upcase
-    uri = URI.parse("https://m.tiktok.com")
+    $LOG.info "Fetching aweme_list from TikTok ... #{query}"
+    uri = URI.parse("https://localhost")
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     request = Net::HTTP::Get.new(query)
-    request['Host'] = 'm.tiktok.com'
-    request['Referer'] = "https://m.tiktok.com/h5/share/usr/#{@_user_id}.html"
-    request['User-Agent'] = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.64 Safari/537.36'
-    request['Sec-Metadata'] = 'destination=empty, site=same-origin'
-    request['x-requested-with'] = 'XMLHttpRequest'
     response = http.request(request)
     return JSON.parse(response.body)
   end
@@ -73,12 +64,10 @@ class TikTok
     request.body = data.to_json
     response = http.request(request)
     responseBody = JSON.parse(response.body)
-    $LOG.debug "Submit data to localhost ... ".upcase
-    $LOG.debug "Server response OK #{responseBody["message"]}".upcase if responseBody["success"]
+    $LOG.debug "Submit data to localhost ... "
+    $LOG.debug "Server response OK #{responseBody["message"]}" if responseBody["success"]
     $LOG.error response.body if !JSON.parse(response.body)["success"]
-    response.body.to_s.include? "AWEME_UPDATED"
   end
-
 
   def valid_url(url)
     # url_regexp = /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/ix
@@ -196,17 +185,27 @@ class TikTok
 
   def formatURL(url)
     if url.include?("s3://")
-      url = "http://musically-prod.s3.amazonaws.com" + url.split("s3://").last
+      url = "http://musically-prod.s3.amazonaws.com/" + url.split("s3://").last
     end
+
     if url.include?("az://")
-      url = "http://musically-prod.s3.amazonaws.com" + url.split("s3://").last
+      url = "http://musically-prod.s3.amazonaws.com/" + url.split("az://").last
     end
 
-    if url.match(/^http:\/\/p3\.pstatp\.com/)
-      url = url.gsub(/^http:\/\/p3\.pstatp\.com/, "http://p16-tiktokcdn-com.akamaized.net")
+    if url.match(/^\/\//)
+      url = "http:" + url
     end
 
-    return url
+    puts url if $DEBUG
+    url = "http" + url.split("http").last
+
+    if url.include?("http://p3.pstatp.com")
+      url = url.gsub("http://p3.pstatp.com", "http://p16-tiktokcdn-com.akamaized.net")
+    end
+
+    puts url,"\n=========\n" if $DEBUG
+
+    return url if $DEBUG
 
     # url.gsub("s3://musically-prod", "http://musically-prod.s3.amazonaws.com")
     # .gsub(/^\/\//, "http://")
@@ -250,6 +249,11 @@ class TikTok
       next if @downloaded.include? url
       @downloaded << url if !@downloaded.include? url
       uri = URI(url.gsub(/^\/\//, "http://").gsub("?video_id=", "").gsub(/&/, "?"))
+      if $DEBUG
+        puts url
+        puts "path => " + uri.path
+        puts "\n====================\n"
+      end
       @list << {
         "url" => url.gsub(/^\/\//, "http://"),
         "path" => "B:/TikTok/" + base + uri.path
@@ -259,16 +263,14 @@ class TikTok
 
   def getRecursive()
     data = getJSON()
-    @count += data["aweme_list"].length
-    $LOG.debug "aweme fetch done for => #{@_user_id} found #{data["aweme_list"].length} aweme".upcase
-    for aweme in  data["aweme_list"]
+    @_count = data["start"]
+    for aweme in data["results"]
       getMediaURLS(aweme)
-      return if submitToDB(aweme)
+      # submitToDB(aweme)
     end
 
-    if !data["has_more"].nil? && data["has_more"] == 1 && @count < @max_limit
-      @_max_cursor = data["max_cursor"]
-      $LOG.debug "It has more posts #{@count} => #{@limit} => #{@_max_cursor}".upcase
+    if data["has_more"] && @_count <= 18000
+      $LOG.debug "It has more posts #{@count} => #{@_count} => #{@_max_cursor}"
       getRecursive();
     end
   end
@@ -277,7 +279,7 @@ class TikTok
     list = @list.map{
       |a|
 
-      fname = File.basename(a["path"]).split("&").first
+      fname = File.basename(a["path"])
       dir = File.dirname(a["path"])
       {
         "url" => a["url"],
@@ -290,7 +292,7 @@ class TikTok
     _index = 0
     _length = list.length
     _download = 0
-    _url_all = File.open("B:/Scripts/tiktok/user.urls_all.txt", "w")
+    _url_all = File.open("B:/Scripts/tiktok/urls_all.txt", "w")
     list.select!{
       |url|
       print "\r[#{url["url"].fix(100)}] (#{_index}/#{_download}/#{_length}) checking url"
@@ -309,43 +311,31 @@ class TikTok
       [
         a["url"],
         "    dir=" + a["dir"],
-        "    out=" + a["fname"].split("&")[0]
+        "    out=" + a["fname"]
       ].join("\n")
     }
 
-    downloaded = File.open("B:/Scripts/tiktok/user.urls_downloaded.txt", "w")
+    downloaded = File.open("B:/Scripts/tiktok/urls_downloaded.txt", "w")
     downloaded.puts @downloaded.join("\n")
     downloaded.close
 
-    $LOG.info "#{"Saving media urls for download".upcase} => user.urls_new.txt"
-    out = File.open("B:/Scripts/tiktok/user.urls_new.txt", "a")
-    out.puts list.join("\n")
+    $LOG.info "Saving media urls for download => list.txt"
+    out = File.open("B:/Scripts/tiktok/urls_new.txt", "w")
+    out.puts list.join("\n").strip
     out.close
 
-    # $LOG.debug "Downloading media files".upcase
-    # system("aria2c --auto-file-renaming=false --continue=true -i B:/TikTok/list.txt")
+    $LOG.debug "Downloading media files"
+    # system("aria2c --auto-file-renaming=false --continue=true -i B:/Scripts/tiktok/urls_new.txt")
   end
 
   def getAll()
-    $LOG.info "Fetching posts ... ".upcase
+    $LOG.info "Fetching posts ... "
     getRecursive()
     prepareDownloadList()
-    $LOG.info "#{@count} New media to download".upcase
-    $LOG.debug "Finish job in #{Time.now() - $start} seconds".upcase
+    $LOG.info "#{@count} New media downloaded"
+    $LOG.debug "Finish job in #{Time.now() - $start} seconds"
   end
 end
 
-userlist = [
-	["6171987", "-asgQBASpfhxntGY.RdBVPmrIF"],
-	["6548314611485032449", "m6MtIhAZx.ITltz6UUd4fpujLT"],
-	["6521188290954007552", "Qz5A-BAYH33LC7Egh9x1mUM-QO"],
-	["6516360574120673282", "ycukKhAQlY4.ovp7W63fk8nLpD"]
-]
-
-for user in userlist
-	tik = TikTok.new(user[0], user[1], 1550);
-	tik.getAll();
-end
-
-$LOG.debug "Downloading media files"
-system("aria2c --auto-file-renaming=false --continue=true -i B:/Scripts/tiktok/user.urls_new.txt")
+tik = TikTok.new(6573125246566678529, 0);
+tik.getAll();

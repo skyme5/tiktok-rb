@@ -23,32 +23,38 @@ $LOG = Logger.new(STDOUT)
 $start = Time.now
 
 class TikTok
-  def initialize(user_id, count)
+  def initialize(user_id, limit)
     @_name = "TikTok"
     @_version = "0.0.1"
     @_user_id = user_id;
-    @_count = count
-    @_max_cursor = 50
+    @limit = limit
+    @_max_cursor = 0
     @count = 0
-    @downloaded = [] #File.open("B:/TikTok/downloaded.txt").read.split("\n")
+    @downloaded = File.open("B:/Scripts/tiktok/urls_downloaded.txt").read.split("\n")
     @downloaded << Time.now
     @list = []
-    @valid_url_regexp = /^http\:\/\// #/\A#{URI::regexp(['http', 'https'])}\z/
+    @max_limit = 1300
   end
 
   def getJSON
     query = [
-      "/api/v2/tiktok",
-      "#{@_count}",
-      "#{@_max_cursor}"
-    ].join("/")
+      "/aweme/v1/aweme/favorite/?",
+      "user_id=#{@_user_id}",
+      "&count=#{@limit}",
+      "&max_cursor=#{@_max_cursor}",
+      "&_signature=6RbvlRAGtR9hIx5NqDsdNOkW74"
+    ].join("")
 
     $LOG.info "Fetching aweme_list from TikTok ... #{query}"
-    uri = URI.parse("https://localhost")
+    uri = URI.parse("https://m.tiktok.com")
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     request = Net::HTTP::Get.new(query)
+    request['Host'] = 'm.tiktok.com'
+    request['Referer'] = 'https://m.tiktok.com/h5/share/usr/6573125246566678529.html'
+    request['User-Agent'] = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.30 Safari/537.36'
+    request['Sec-Metadata'] = 'destination="", site=same-origin'
     response = http.request(request)
     return JSON.parse(response.body)
   end
@@ -67,11 +73,12 @@ class TikTok
     $LOG.debug "Submit data to localhost ... "
     $LOG.debug "Server response OK #{responseBody["message"]}" if responseBody["success"]
     $LOG.error response.body if !JSON.parse(response.body)["success"]
+    response.body.to_s.include? "AWEME_UPDATED"
   end
 
   def valid_url(url)
     # url_regexp = /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/ix
-    url_regexp = /^(http|s3|az)/ix
+    url_regexp = /^(http|s3|az|\/\/)/ix
     url =~ url_regexp ? true : false
   end
 
@@ -183,6 +190,27 @@ class TikTok
     list
   end
 
+  def formatURL(url)
+    if url.include?("s3://")
+      url = "http://musically-prod.s3.amazonaws.com" + url.split("s3://").last
+    end
+    if url.include?("az://")
+      url = "http://musically-prod.s3.amazonaws.com" + url.split("s3://").last
+    end
+
+    if url.match(/^http:\/\/p3\.pstatp\.com/)
+      url = url.gsub(/^http:\/\/p3\.pstatp\.com/, "http://p16-tiktokcdn-com.akamaized.net")
+    end
+
+    return url
+
+    # url.gsub("s3://musically-prod", "http://musically-prod.s3.amazonaws.com")
+    # .gsub(/^\/\//, "http://")
+    # .gsub("https://p3.pstatp.com/obj/http", "http")
+    # .gsub("http://p3.pstatp.com", "http://p16-tiktokcdn-com.akamaized.net")
+    # .gsub("http//", "http://")
+  end
+
   def combineURLCalls(data)
     url_list = []
     url_list << t_url_label_large(data)
@@ -201,12 +229,7 @@ class TikTok
 
     url_list.map!{
       |url|
-      url = "http" + url.split("http").last
-      url.gsub("s3://musically-prod", "http://musically-prod.s3.amazonaws.com")
-      .gsub(/^\/\//, "http://")
-      .gsub("https://p3.pstatp.com/obj/http", "http")
-      .gsub("http://p3.pstatp.com", "http://p16-tiktokcdn-com.akamaized.net")
-      .gsub("http//", "http://")
+      formatURL(url)
     }
     url_list
   end
@@ -232,14 +255,15 @@ class TikTok
 
   def getRecursive()
     data = getJSON()
-    @_count = data["start"]
-    for aweme in data["results"]
+    @count += data["aweme_list"].length
+    @_max_cursor = data["max_cursor"]
+    for aweme in  data["aweme_list"]
       getMediaURLS(aweme)
-      # submitToDB(aweme)
+      return if submitToDB(aweme)
     end
 
-    if data["has_more"] && @_count <= 50
-      $LOG.debug "It has more posts #{@count} => #{@_count} => #{@_max_cursor}"
+    if data["has_more"] == 1 && @count < @max_limit
+      $LOG.debug "It has more posts #{@count} => #{@limit} => #{@_max_cursor}"
       getRecursive();
     end
   end
@@ -306,5 +330,12 @@ class TikTok
   end
 end
 
-tik = TikTok.new(6573125246566678529, 0);
+##########################
+### skyme5 => 6573125246566678529 => y9t6DBAfl6dD7ovUAwRmHMvbeh
+### lhadorje => 6171987 => -asgQBASpfhxntGY.RdBVPmrIF
+### stylista_10 => 6521188290954007552 => QEQ8wRAUHAPIcc0ZVc2RMkBEPN
+### chinun1004 => 516360574120673282 => ycukKhAQlY4.ovp7W63fk8nLpD
+
+
+tik = TikTok.new(6573125246566678529, 50);
 tik.getAll();
