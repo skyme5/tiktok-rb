@@ -1,0 +1,375 @@
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686490693835181318/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686490693835181318/obj
+    out=c150000f34767e2cb56
+http://p16.muscdn.com/img/musically-maliva-obj/1632403682703382~noop.image
+    dir=B:/TikTok/6686490693835181318/img/musically-maliva-obj
+    out=1632403682703382~noop.image
+https://p3.pstatp.com/obj/musically-maliva-obj/1632403682702390.mp3
+    dir=B:/TikTok/6686490693835181318/obj/musically-maliva-obj
+    out=1632403682702390.mp3
+http://musically-prod.s3.amazonaws.commusically-prod/res/user_v_icon/425/icon_286722046674259968-w51AmN9fxq.jpg
+    dir=B:/TikTok/6686490693835181318/res/user_v_icon/425
+    out=icon_286722046674259968-w51AmN9fxq.jpg
+http://mpak-suse1.akamaized.net/res/user_v_icon/425/icon_286722046674259968-w51AmN9fxq.jpg
+    dir=B:/TikTok/6686490693835181318/res/user_v_icon/425
+    out=icon_286722046674259968-w51AmN9fxq.jpg
+http://musically-prod.s3.amazonaws.commusically-prod/res/user_v_icon/425/icon_286722046674259968-w51AmN9fxq.jpg
+    dir=B:/TikTok/6686490693835181318/res/user_v_icon/425
+    out=icon_286722046674259968-w51AmN9fxq.jpg
+http://mpak-suse1.akamaized.net/res/user_v_icon/425/icon_286722046674259968-w51AmN9fxq.jpg
+    dir=B:/TikTok/6686490693835181318/res/user_v_icon/425
+    out=icon_286722046674259968-w51AmN9fxq.jpg
+http://p16.muscdn.com/img/tos-maliva-p-0068/78c97b34151d43b1b9886dcce946b197~noop.image
+    dir=B:/TikTok/6686490693835181318/img/tos-maliva-p-0068
+    out=78c97b34151d43b1b9886dcce946b197~noop.image
+http://p16.muscdn.com/obj/tos-maliva-p-0068/548d9756b26941418ad232e4d0155588
+    dir=B:/TikTok/6686490693835181318/obj/tos-maliva-p-0068
+    out=548d9756b26941418ad232e4d0155588
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v090440e0000bj5ivic1psvqqomijuo0&line=0
+    dir=B:/TikTok/6686490693835181318/aweme/v1/playwm
+    out=v090440e0000bj5ivic1psvqqomijuo0
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686666845463776518/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686666845463776518/obj
+    out=c150000f34767e2cb56
+http://p16.muscdn.com/img/musically-maliva-obj/1630538305367045~noop.image
+    dir=B:/TikTok/6686666845463776518/img/musically-maliva-obj
+    out=1630538305367045~noop.image
+https://p3.pstatp.com/obj/musically-maliva-obj/1630538303897653.mp3
+    dir=B:/TikTok/6686666845463776518/obj/musically-maliva-obj
+    out=1630538303897653.mp3
+http://m-p16.akamaized.net/img/musically-maliva-obj/1626049158020101~c5_1080x1080.jpeg
+    dir=B:/TikTok/6686666845463776518/img/musically-maliva-obj
+    out=1626049158020101~c5_1080x1080.jpeg
+http://m-p16.akamaized.net/img/musically-maliva-obj/1626049158020101~c5_100x100.jpeg
+    dir=B:/TikTok/6686666845463776518/img/musically-maliva-obj
+    out=1626049158020101~c5_100x100.jpeg
+http://p16.muscdn.com/img/tos-maliva-p-0068/08b145b223c940cfbc5043d18d3b6432~noop.image
+    dir=B:/TikTok/6686666845463776518/img/tos-maliva-p-0068
+    out=08b145b223c940cfbc5043d18d3b6432~noop.image
+http://p16.muscdn.com/obj/tos-maliva-p-0068/69a83133afe24ccdbb82ff2877e271e8
+    dir=B:/TikTok/6686666845463776518/obj/tos-maliva-p-0068
+    out=69a83133afe24ccdbb82ff2877e271e8
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v09044120000bj5svbed9kv9ojf2vssg&line=0
+    dir=B:/TikTok/6686666845463776518/aweme/v1/playwm
+    out=v09044120000bj5svbed9kv9ojf2vssg
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686628743651265797/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686628743651265797/obj
+    out=c150000f34767e2cb56
+http://p16.muscdn.com/img/musically-maliva-obj/1602289461902341~noop.image
+    dir=B:/TikTok/6686628743651265797/img/musically-maliva-obj
+    out=1602289461902341~noop.image
+https://p3.pstatp.com/obj/musically-maliva-obj/1602289461857285.mp3
+    dir=B:/TikTok/6686628743651265797/obj/musically-maliva-obj
+    out=1602289461857285.mp3
+http://m-p16.akamaized.net/img/musically-maliva-obj/1609065560138757~c5_1080x1080.jpeg
+    dir=B:/TikTok/6686628743651265797/img/musically-maliva-obj
+    out=1609065560138757~c5_1080x1080.jpeg
+http://m-p16.akamaized.net/img/musically-maliva-obj/1609065560138757~c5_100x100.jpeg
+    dir=B:/TikTok/6686628743651265797/img/musically-maliva-obj
+    out=1609065560138757~c5_100x100.jpeg
+http://p16.muscdn.com/img/tos-maliva-p-0068/caba2d4bcf3946a280fc7ed528e081a9~noop.image
+    dir=B:/TikTok/6686628743651265797/img/tos-maliva-p-0068
+    out=caba2d4bcf3946a280fc7ed528e081a9~noop.image
+http://p16.muscdn.com/obj/tos-maliva-p-0068/9e7d36738c4c4a8097901aa4a3546fe5
+    dir=B:/TikTok/6686628743651265797/obj/tos-maliva-p-0068
+    out=9e7d36738c4c4a8097901aa4a3546fe5
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v09044310000bj5qqpeer614gb83jusg&line=0
+    dir=B:/TikTok/6686628743651265797/aweme/v1/playwm
+    out=v09044310000bj5qqpeer614gb83jusg
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686482515403738374/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686482515403738374/obj
+    out=c150000f34767e2cb56
+http://p16.muscdn.com/img/musically-maliva-obj/1628366521452597~noop.image
+    dir=B:/TikTok/6686482515403738374/img/musically-maliva-obj
+    out=1628366521452597~noop.image
+https://p3.pstatp.com/obj/musically-maliva-obj/1628366521452581.mp3
+    dir=B:/TikTok/6686482515403738374/obj/musically-maliva-obj
+    out=1628366521452581.mp3
+http://m-p16.akamaized.net/img/musically-maliva-obj/1630711762220038~c5_1080x1080.jpeg
+    dir=B:/TikTok/6686482515403738374/img/musically-maliva-obj
+    out=1630711762220038~c5_1080x1080.jpeg
+http://m-p16.akamaized.net/img/musically-maliva-obj/1630711762220038~c5_100x100.jpeg
+    dir=B:/TikTok/6686482515403738374/img/musically-maliva-obj
+    out=1630711762220038~c5_100x100.jpeg
+http://p16.muscdn.com/img/tos-maliva-p-0068/4405030da16b4c139678fb0cf3c0d717~noop.image
+    dir=B:/TikTok/6686482515403738374/img/tos-maliva-p-0068
+    out=4405030da16b4c139678fb0cf3c0d717~noop.image
+http://p16.muscdn.com/obj/tos-maliva-p-0068/26bd98121f78410d854aa5b67ca104cc
+    dir=B:/TikTok/6686482515403738374/obj/tos-maliva-p-0068
+    out=26bd98121f78410d854aa5b67ca104cc
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v09044d10000bj5iglrl96b258eomvpg&line=0
+    dir=B:/TikTok/6686482515403738374/aweme/v1/playwm
+    out=v09044d10000bj5iglrl96b258eomvpg
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686300590479379714/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686300590479379714/obj
+    out=c150000f34767e2cb56
+http://p16-tiktokcdn-com.akamaized.net/aweme/1080x1080/tiktok-obj/1630942928629762.jpeg
+    dir=B:/TikTok/6686300590479379714/aweme/1080x1080/tiktok-obj
+    out=1630942928629762.jpeg
+https://p3.pstatp.com/obj/tiktok-obj/1628401137806353.mp3
+    dir=B:/TikTok/6686300590479379714/obj/tiktok-obj
+    out=1628401137806353.mp3
+http://p16-tiktokcdn-com.akamaized.net/aweme/1080x1080/tiktok-obj/1632426789151746.jpeg
+    dir=B:/TikTok/6686300590479379714/aweme/1080x1080/tiktok-obj
+    out=1632426789151746.jpeg
+http://p16-tiktokcdn-com.akamaized.net/aweme/100x100/tiktok-obj/1632426789151746.jpeg
+    dir=B:/TikTok/6686300590479379714/aweme/100x100/tiktok-obj
+    out=1632426789151746.jpeg
+https://p16-tiktokcdn-com.akamaized.net/large/v0201/fe7542de2fd749ac9f3807056b7ca662.jpg
+    dir=B:/TikTok/6686300590479379714/large/v0201
+    out=fe7542de2fd749ac9f3807056b7ca662.jpg
+http://p16-tiktokcdn-com.akamaized.net/obj/v0201/302c885833c249efa6c55498014bef28
+    dir=B:/TikTok/6686300590479379714/obj/v0201
+    out=302c885833c249efa6c55498014bef28
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v07025a70000bj5f0rbsqmkbdo2nsh7g&line=0
+    dir=B:/TikTok/6686300590479379714/aweme/v1/playwm
+    out=v07025a70000bj5f0rbsqmkbdo2nsh7g
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686300636906032386/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686300636906032386/obj
+    out=c150000f34767e2cb56
+http://p16-tiktokcdn-com.akamaized.net/aweme/1080x1080/tiktok-obj/1632253826608129.jpeg
+    dir=B:/TikTok/6686300636906032386/aweme/1080x1080/tiktok-obj
+    out=1632253826608129.jpeg
+https://p3.pstatp.com/obj/tiktok-obj/1629647159459873.mp3
+    dir=B:/TikTok/6686300636906032386/obj/tiktok-obj
+    out=1629647159459873.mp3
+http://p16-tiktokcdn-com.akamaized.net/aweme/1080x1080/tiktok-obj/1632426789151746.jpeg
+    dir=B:/TikTok/6686300636906032386/aweme/1080x1080/tiktok-obj
+    out=1632426789151746.jpeg
+http://p16-tiktokcdn-com.akamaized.net/aweme/100x100/tiktok-obj/1632426789151746.jpeg
+    dir=B:/TikTok/6686300636906032386/aweme/100x100/tiktok-obj
+    out=1632426789151746.jpeg
+https://p16-tiktokcdn-com.akamaized.net/large/v0201/45dfbc8d76674f18ae26ea95d3520de8.jpg
+    dir=B:/TikTok/6686300636906032386/large/v0201
+    out=45dfbc8d76674f18ae26ea95d3520de8.jpg
+http://p16-tiktokcdn-com.akamaized.net/obj/v0201/4211ff7d62504c5a88f2aa6d8518eaa5
+    dir=B:/TikTok/6686300636906032386/obj/v0201
+    out=4211ff7d62504c5a88f2aa6d8518eaa5
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v07025a00000bj5eomra28j9rtv23r8g&line=0
+    dir=B:/TikTok/6686300636906032386/aweme/v1/playwm
+    out=v07025a00000bj5eomra28j9rtv23r8g
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686634145977797894/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686634145977797894/obj
+    out=c150000f34767e2cb56
+http://p16.muscdn.com/img/musically-maliva-obj/1632457461233686~noop.image
+    dir=B:/TikTok/6686634145977797894/img/musically-maliva-obj
+    out=1632457461233686~noop.image
+https://p3.pstatp.com/obj/musically-maliva-obj/1632457461233670.mp3
+    dir=B:/TikTok/6686634145977797894/obj/musically-maliva-obj
+    out=1632457461233670.mp3
+https://p1.pstatp.com/aweme/720x720/a17d00188bc42a731e05.jpeg
+    dir=B:/TikTok/6686634145977797894/aweme/720x720
+    out=a17d00188bc42a731e05.jpeg
+http://p1.pstatp.com/aweme/720x720/a17d00188bc42a731e05.jpeg
+    dir=B:/TikTok/6686634145977797894/aweme/720x720
+    out=a17d00188bc42a731e05.jpeg
+https://p1.pstatp.com/aweme/720x720/a17d00188bc42a731e05.jpeg
+    dir=B:/TikTok/6686634145977797894/aweme/720x720
+    out=a17d00188bc42a731e05.jpeg
+http://p1.pstatp.com/aweme/720x720/a17d00188bc42a731e05.jpeg
+    dir=B:/TikTok/6686634145977797894/aweme/720x720
+    out=a17d00188bc42a731e05.jpeg
+http://p16.muscdn.com/img/tos-maliva-p-0068/dfef2d09b8724158a39584ca73f2c17e~noop.image
+    dir=B:/TikTok/6686634145977797894/img/tos-maliva-p-0068
+    out=dfef2d09b8724158a39584ca73f2c17e~noop.image
+http://p16.muscdn.com/obj/tos-maliva-p-0068/5cb1ccea4869401d80dfa4efccf82559
+    dir=B:/TikTok/6686634145977797894/obj/tos-maliva-p-0068
+    out=5cb1ccea4869401d80dfa4efccf82559
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v09839350000bj5r4mh7t90bit9onmqg&line=0
+    dir=B:/TikTok/6686634145977797894/aweme/v1/playwm
+    out=v09839350000bj5r4mh7t90bit9onmqg
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686302367685659905/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686302367685659905/obj
+    out=c150000f34767e2cb56
+http://p16-tiktokcdn-com.akamaized.net/aweme/1080x1080/tiktok-obj/1630026014674946.jpeg
+    dir=B:/TikTok/6686302367685659905/aweme/1080x1080/tiktok-obj
+    out=1630026014674946.jpeg
+https://p3.pstatp.com/obj/tiktok-obj/1632234025133073.mp3
+    dir=B:/TikTok/6686302367685659905/obj/tiktok-obj
+    out=1632234025133073.mp3
+http://p16-tiktokcdn-com.akamaized.net/aweme/1080x1080/tiktok-obj/1630026014674946.jpeg
+    dir=B:/TikTok/6686302367685659905/aweme/1080x1080/tiktok-obj
+    out=1630026014674946.jpeg
+http://p16-tiktokcdn-com.akamaized.net/aweme/100x100/tiktok-obj/1630026014674946.jpeg
+    dir=B:/TikTok/6686302367685659905/aweme/100x100/tiktok-obj
+    out=1630026014674946.jpeg
+https://p16-tiktokcdn-com.akamaized.net/large/v0201/86ef54f6ecf9420b849b0f01dc1d1843.jpg
+    dir=B:/TikTok/6686302367685659905/large/v0201
+    out=86ef54f6ecf9420b849b0f01dc1d1843.jpg
+http://p16-tiktokcdn-com.akamaized.net/obj/v0201/82bce92fb734451c9ede19a1904b0356
+    dir=B:/TikTok/6686302367685659905/obj/v0201
+    out=82bce92fb734451c9ede19a1904b0356
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v070255b0000bj5gaj0src5lfdt43760&line=0
+    dir=B:/TikTok/6686302367685659905/aweme/v1/playwm
+    out=v070255b0000bj5gaj0src5lfdt43760
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686310869707525377/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686310869707525377/obj
+    out=c150000f34767e2cb56
+http://p16-tiktokcdn-com.akamaized.net/aweme/1080x1080/tiktok-obj/1631499963693057.jpeg
+    dir=B:/TikTok/6686310869707525377/aweme/1080x1080/tiktok-obj
+    out=1631499963693057.jpeg
+https://p3.pstatp.com/obj/tiktok-obj/1632423533681698.mp3
+    dir=B:/TikTok/6686310869707525377/obj/tiktok-obj
+    out=1632423533681698.mp3
+http://p16-tiktokcdn-com.akamaized.net/aweme/1080x1080/tiktok-obj/1631499963693057.jpeg
+    dir=B:/TikTok/6686310869707525377/aweme/1080x1080/tiktok-obj
+    out=1631499963693057.jpeg
+http://p16-tiktokcdn-com.akamaized.net/aweme/100x100/tiktok-obj/1631499963693057.jpeg
+    dir=B:/TikTok/6686310869707525377/aweme/100x100/tiktok-obj
+    out=1631499963693057.jpeg
+https://p16-tiktokcdn-com.akamaized.net/large/v0201/759160ab3d2c44268358c0f8b1d555be.jpg
+    dir=B:/TikTok/6686310869707525377/large/v0201
+    out=759160ab3d2c44268358c0f8b1d555be.jpg
+http://p16-tiktokcdn-com.akamaized.net/obj/v0201/0a2f82b972e349b981869f2d30194d15
+    dir=B:/TikTok/6686310869707525377/obj/v0201
+    out=0a2f82b972e349b981869f2d30194d15
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v070250e0000bj5suhask3dihp10ueng&line=0
+    dir=B:/TikTok/6686310869707525377/aweme/v1/playwm
+    out=v070250e0000bj5suhask3dihp10ueng
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686305183800085762/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686305183800085762/obj
+    out=c150000f34767e2cb56
+http://p16-tiktokcdn-com.akamaized.net/aweme/1080x1080/tiktok-obj/1631499963693057.jpeg
+    dir=B:/TikTok/6686305183800085762/aweme/1080x1080/tiktok-obj
+    out=1631499963693057.jpeg
+https://p3.pstatp.com/obj/tiktok-obj/1632389663136802.mp3
+    dir=B:/TikTok/6686305183800085762/obj/tiktok-obj
+    out=1632389663136802.mp3
+http://p16-tiktokcdn-com.akamaized.net/aweme/1080x1080/tiktok-obj/1631499963693057.jpeg
+    dir=B:/TikTok/6686305183800085762/aweme/1080x1080/tiktok-obj
+    out=1631499963693057.jpeg
+http://p16-tiktokcdn-com.akamaized.net/aweme/100x100/tiktok-obj/1631499963693057.jpeg
+    dir=B:/TikTok/6686305183800085762/aweme/100x100/tiktok-obj
+    out=1631499963693057.jpeg
+https://p16-tiktokcdn-com.akamaized.net/large/v0201/5243cda8671f4029ac916b9a3fe45421.jpg
+    dir=B:/TikTok/6686305183800085762/large/v0201
+    out=5243cda8671f4029ac916b9a3fe45421.jpg
+http://p16-tiktokcdn-com.akamaized.net/obj/v0201/a8d9b8dabe4f4831add9d89cbbdac73e
+    dir=B:/TikTok/6686305183800085762/obj/v0201
+    out=a8d9b8dabe4f4831add9d89cbbdac73e
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v070254a0000bj5oro4a59rpso1fg710&line=0
+    dir=B:/TikTok/6686305183800085762/aweme/v1/playwm
+    out=v070254a0000bj5oro4a59rpso1fg710
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686303290055052546/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686303290055052546/obj
+    out=c150000f34767e2cb56
+https://is4-ssl.mzstatic.com/image/thumb/Music/f6/f8/7e/mzi.npuhacsd.jpg/170x170bb.jpg
+    dir=B:/TikTok/6686303290055052546/image/thumb/Music/f6/f8/7e/mzi.npuhacsd.jpg
+    out=170x170bb.jpg
+https://is4-ssl.mzstatic.com/image/thumb/Music/f6/f8/7e/mzi.npuhacsd.jpg/170x170bb.jpg
+    dir=B:/TikTok/6686303290055052546/image/thumb/Music/f6/f8/7e/mzi.npuhacsd.jpg
+    out=170x170bb.jpg
+http://musically-prod.s3.amazonaws.commusically-prod/track/reg02/2018/03/05/04/6529181877239026688_yNwVimwatm.mp3
+    dir=B:/TikTok/6686303290055052546/track/reg02/2018/03/05/04
+    out=6529181877239026688_yNwVimwatm.mp3
+http://musically-prod.s3.amazonaws.commusically-prod/track/reg02/2018/03/05/04/6529181877239026688_yNwVimwatm.mp3
+    dir=B:/TikTok/6686303290055052546/track/reg02/2018/03/05/04
+    out=6529181877239026688_yNwVimwatm.mp3
+http://p16-tiktokcdn-com.akamaized.net/aweme/1080x1080/tiktok-obj/1632171523838978.jpeg
+    dir=B:/TikTok/6686303290055052546/aweme/1080x1080/tiktok-obj
+    out=1632171523838978.jpeg
+http://p16-tiktokcdn-com.akamaized.net/aweme/100x100/tiktok-obj/1632171523838978.jpeg
+    dir=B:/TikTok/6686303290055052546/aweme/100x100/tiktok-obj
+    out=1632171523838978.jpeg
+https://p16-tiktokcdn-com.akamaized.net/large/v0201/c784bbea272d466ea5ac2690b6c8337a.jpg
+    dir=B:/TikTok/6686303290055052546/large/v0201
+    out=c784bbea272d466ea5ac2690b6c8337a.jpg
+http://p16-tiktokcdn-com.akamaized.net/obj/v0201/426873f4696f47fc9899cc13481245f9
+    dir=B:/TikTok/6686303290055052546/obj/v0201
+    out=426873f4696f47fc9899cc13481245f9
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v07025610000bj5hk8074qgpgmtrn2gg&line=0
+    dir=B:/TikTok/6686303290055052546/aweme/v1/playwm
+    out=v07025610000bj5hk8074qgpgmtrn2gg
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686443339425778949/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686443339425778949/obj
+    out=c150000f34767e2cb56
+http://p16.muscdn.com/img/musically-maliva-obj/1631289289965574~noop.image
+    dir=B:/TikTok/6686443339425778949/img/musically-maliva-obj
+    out=1631289289965574~noop.image
+https://p3.pstatp.com/obj/musically-maliva-obj/1631289289318453.mp3
+    dir=B:/TikTok/6686443339425778949/obj/musically-maliva-obj
+    out=1631289289318453.mp3
+http://musically-prod.s3.amazonaws.commusically-prod/res/usericon/987/icon-6171987-70.jpg
+    dir=B:/TikTok/6686443339425778949/res/usericon/987
+    out=icon-6171987-70.jpg
+http://mpak-suse1.akamaized.net/res/usericon/987/icon-6171987-70.jpg
+    dir=B:/TikTok/6686443339425778949/res/usericon/987
+    out=icon-6171987-70.jpg
+http://musically-prod.s3.amazonaws.commusically-prod/res/usericon/987/icon-6171987-70.jpg
+    dir=B:/TikTok/6686443339425778949/res/usericon/987
+    out=icon-6171987-70.jpg
+http://mpak-suse1.akamaized.net/res/usericon/987/icon-6171987-70.jpg
+    dir=B:/TikTok/6686443339425778949/res/usericon/987
+    out=icon-6171987-70.jpg
+http://p16.muscdn.com/img/tos-maliva-p-0068/0fa0a90a10534e55bb1b7d937020567f~noop.image
+    dir=B:/TikTok/6686443339425778949/img/tos-maliva-p-0068
+    out=0fa0a90a10534e55bb1b7d937020567f~noop.image
+http://p16.muscdn.com/obj/tos-maliva-p-0068/599eb10d06364a5383f0b88fd6cb987b
+    dir=B:/TikTok/6686443339425778949/obj/tos-maliva-p-0068
+    out=599eb10d06364a5383f0b88fd6cb987b
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v09044350000bj5g8o97t90bit9dgr40&line=0
+    dir=B:/TikTok/6686443339425778949/aweme/v1/playwm
+    out=v09044350000bj5g8o97t90bit9dgr40
+http://p1.pstatp.com/obj/c1500005a13914f1bcc
+    dir=B:/TikTok/6686648075575889158/obj
+    out=c1500005a13914f1bcc
+http://p1.pstatp.com/obj/c150000f34767e2cb56
+    dir=B:/TikTok/6686648075575889158/obj
+    out=c150000f34767e2cb56
+http://p16.muscdn.com/img/musically-maliva-obj/1629578300249125~noop.image
+    dir=B:/TikTok/6686648075575889158/img/musically-maliva-obj
+    out=1629578300249125~noop.image
+https://p3.pstatp.com/obj/musically-maliva-obj/1629578300249109.mp3
+    dir=B:/TikTok/6686648075575889158/obj/musically-maliva-obj
+    out=1629578300249109.mp3
+http://m-p16.akamaized.net/img/musically-maliva-obj/1623788582202374~c5_1080x1080.jpeg
+    dir=B:/TikTok/6686648075575889158/img/musically-maliva-obj
+    out=1623788582202374~c5_1080x1080.jpeg
+http://m-p16.akamaized.net/img/musically-maliva-obj/1623788582202374~c5_100x100.jpeg
+    dir=B:/TikTok/6686648075575889158/img/musically-maliva-obj
+    out=1623788582202374~c5_100x100.jpeg
+http://p16.muscdn.com/img/tos-maliva-p-0068/4a57546fbc984e4e83214662106d47f6~noop.image
+    dir=B:/TikTok/6686648075575889158/img/tos-maliva-p-0068
+    out=4a57546fbc984e4e83214662106d47f6~noop.image
+http://p16.muscdn.com/obj/tos-maliva-p-0068/84f224bde497410ead675708f02ad3d4
+    dir=B:/TikTok/6686648075575889158/obj/tos-maliva-p-0068
+    out=84f224bde497410ead675708f02ad3d4
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=v09044a90000bj5rtpqjqrolbv49pi70&line=0
+    dir=B:/TikTok/6686648075575889158/aweme/v1/playwm
+    out=v09044a90000bj5rtpqjqrolbv49pi70

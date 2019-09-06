@@ -205,7 +205,7 @@ class TikTok
 
     puts url,"\n=========\n" if $DEBUG
 
-    return url if $DEBUG
+    return url
 
     # url.gsub("s3://musically-prod", "http://musically-prod.s3.amazonaws.com")
     # .gsub(/^\/\//, "http://")
@@ -276,6 +276,7 @@ class TikTok
   end
 
   def prepareDownloadList
+    puts "#{@list.length} urls found"
     list = @list.map{
       |a|
 
@@ -325,7 +326,7 @@ class TikTok
     out.close
 
     $LOG.debug "Downloading media files"
-    # system("aria2c --auto-file-renaming=false --continue=true -i B:/Scripts/tiktok/urls_new.txt")
+    system("aria2c --auto-file-renaming=false --continue=true -i B:/Scripts/tiktok/urls_new.txt")
   end
 
   def getAll()

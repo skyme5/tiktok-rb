@@ -30,8 +30,7 @@ class TikTok
     @config = config
     @cursor = { "max" => 0, "min" => 0}
     @count = 0
-    @downloaded = File.open("B:/Scripts/tiktok/user.urls_downloaded.txt").read.split("\n")
-    @downloaded << Time.now
+    @aweme = []
     @list = []
     @max_limit = 1300
   end
@@ -64,24 +63,44 @@ class TikTok
     return JSON.parse(response.body)
   end
 
-  def submitToDB(data)
-    query = "/api/v2/tiktok"
+  def requestCheck(path, data)
     uri = URI.parse("https://localhost")
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-    request = Net::HTTP::Post.new(query)
-    request.add_field('Content-Type', 'application/json')
+    request = Net::HTTP::Post.new(path)
+    request.add_field('Content-Type', 'application/json; charset=utf-8')
     request.body = data.to_json
     response = http.request(request)
-    responseBody = JSON.parse(response.body)
-    $LOG.debug "Submit data to localhost ... ".upcase
-    $LOG.debug "Server response OK #{responseBody["message"]}".upcase if responseBody["success"]
-    $LOG.error response.body if !JSON.parse(response.body)["success"]
-    response.body.to_s.include? "AWEME_UPDATED"
-    false
+		begin
+			return JSON.parse(response.body)
+		rescue
+			p data
+			return {"exist" => false}
+		end
   end
 
+  def submitToDB(data)
+		begin
+			query = "/api/v2/tiktok"
+			uri = URI.parse("https://localhost")
+			http = Net::HTTP.new(uri.host, uri.port)
+			http.use_ssl = true
+			http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+			request = Net::HTTP::Post.new(query)
+			request.add_field('Content-Type', 'application/json; charset=utf-8')
+			request.body = data.to_json.force_encoding("UTF-8")
+			response = http.request(request)
+			responseBody = JSON.parse(response.body)
+			$LOG.debug "Submit data to localhost ... ".upcase
+			$LOG.debug "Server response OK #{responseBody["message"]}".upcase if responseBody["success"]
+			$LOG.error response.body if !JSON.parse(response.body)["success"]
+			return response.body.to_s.include? "AWEME_UPDATED" if !@config["download_all"]
+			return false if @config["download_all"]
+		rescue
+			return false
+		end
+  end
 
   def valid_url(url)
     # url_regexp = /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/ix
@@ -250,8 +269,6 @@ class TikTok
     items.each {
       |url|
       next if url.nil?
-      next if @downloaded.include? url
-      @downloaded << url if !@downloaded.include? url
       uri = URI(url.gsub(/^\/\//, "http://").gsub("?video_id=", "").gsub(/&/, "?"))
       @list << {
         "url" => url.gsub(/^\/\//, "http://"),
@@ -260,13 +277,22 @@ class TikTok
     }
   end
 
+  def awemeExist(aweme_id)
+    response = requestCheck("/api/v2/tiktok/" + aweme_id + "/exist", {"aweme_id" => aweme_id})
+    response["exist"]
+  end
+
   def getRecursive()
     data = getJSON()
     @count += data["aweme_list"].length
     $LOG.debug "aweme fetch done for => #{@config["user_id"]} found #{data["aweme_list"].length} aweme".upcase
     for aweme in  data["aweme_list"]
-      getMediaURLS(aweme)
-      return if submitToDB(aweme)
+      aweme_exist = awemeExist(aweme["aweme_id"])
+      if !aweme_exist
+        getMediaURLS(aweme)
+        @aweme << aweme
+      end
+      return if aweme_exist && !@config["download_all"]
     end
 
     if !data["has_more"].nil? && data["has_more"] == 1
@@ -296,12 +322,24 @@ class TikTok
     return list
   end
 
+  def saveToDB
+    @aweme.reverse.each{
+      |aweme|
+      submitToDB(aweme)
+    }
+  end
+
   def get()
     $LOG.info "Fetching posts ... ".upcase
-    getRecursive()
-    list = prepareDownloadList()
-    $LOG.info "#{@count} New media to download".upcase
-    $LOG.debug "Finish job in #{Time.now() - $start} seconds".upcase
-    return list
+    begin
+      getRecursive()
+      saveToDB()
+      list = prepareDownloadList()
+      $LOG.info "#{@count} New media to download".upcase
+      $LOG.debug "Finish job in #{Time.now() - $start} seconds".upcase
+      return list
+    rescue
+      return []
+    end
   end
 end
