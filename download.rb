@@ -1,4 +1,6 @@
 #!/usr/bin/ruby
+# frozen_string_literal: true
+
 # @Author: Sky
 # @Date:   2019-01-28 14:40:35
 # @Last Modified by:   Sky
@@ -9,7 +11,7 @@ require 'uri'
 require 'json'
 
 def request(path, data)
-  uri = URI.parse("http://127.0.0.1:3232")
+  uri = URI.parse('http://127.0.0.1:3232')
 
   http = Net::HTTP.new(uri.host, uri.port)
 
@@ -19,23 +21,21 @@ def request(path, data)
 
   response = http.request(request)
 
-  return JSON.parse(response.body)
+  JSON.parse(response.body)
 end
 
-users = JSON.parse(File.read("config.json"))
+users = JSON.parse(File.read('config.json'))
 
-_index = 0
 length = users.length
-for user in users
-	next if !user["download"].nil? && !user["download"]
-  puts "Downloading User => [#{_index}/#{length}] #{user["username"]}, #{user["fullname"]}"
-  request("/api/v2/tiktok/download", {
-            "id" => user["id"],
-            "download_all" => user["download_all"],
-            "url" => "https://www.tiktok.com/#{user["username"]}"
-  })
+users.each_with_index do |user, index|
+  next if !user['download'].nil? && !user['download']
+
+  puts "Downloading User => [#{index}/#{length}] #{user['username']}, #{user['fullname']}"
+  request('/api/v2/tiktok/download',
+          'id' => user['id'],
+          'download_all' => user['download_all'],
+          'url' => "https://www.tiktok.com/#{user['username']}")
   sleep(120)
-	_index = _index + 1
 end
 
 # puts "Downloading media files"
@@ -53,5 +53,5 @@ end
 #
 # puts "Finish downloading media files"
 
-system("copy urls_new.txt #{Time.now.strftime("%Y-%m-%d_%H-%M-%S")}_urls_new.txt")
+# system("copy urls_new.txt #{Time.now.strftime('%Y-%m-%d_%H-%M-%S')}_urls_new.txt")
 # system("del urls_new.txt")
